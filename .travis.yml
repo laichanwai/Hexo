@@ -21,4 +21,8 @@ before_install:
   - git config --global user.name "laizw"
   - git config --global user.email i@laizw.cn
 deploy:
-  hexo deploy
+  provider: script
+  script: hexo deploy
+  skip_cleanup: true
+  on:
+    branch: master
