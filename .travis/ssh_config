@@ -1,4 +1,5 @@
 Host git.coding.net
-User laichanwai
-PreferredAuthentications publickey
-IdentityFile ~/.ssh/coding
+	User laichanwai
+	PasswordAuthentication no
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/id_rsa
