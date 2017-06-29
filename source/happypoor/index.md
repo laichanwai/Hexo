@@ -1,5 +1,6 @@
 ---
 title: 穷开心
+layout: post
 date: 2016-07-05 00:52:12
 ---
 

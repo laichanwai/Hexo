@@ -1,5 +1,6 @@
 ---
 title: Comein
+layout: post
 date: 2016-07-05 01:15:24
 ---
 

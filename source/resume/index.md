@@ -1,5 +1,6 @@
 ---
 title: Resume
+layout: post
 ---
 
 ### 个人信息

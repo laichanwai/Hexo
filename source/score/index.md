@@ -1,5 +1,6 @@
 ---
 title: Score
+layout: post
 date: 2016-07-05 01:00:05
 ---
 
