@@ -1,11 +1,5 @@
 ---
 title: Score
-tags:
-  - iOS
-  - 项目
-permalink: score
-id: 21
-updated: '2016-07-07 15:10:00'
 date: 2016-07-05 01:00:05
 ---
 
@@ -23,10 +17,8 @@ date: 2016-07-05 01:00:05
 - 使用 PupupViewController 展示详细数据
 - 使用 Core Animation 开发炫丽的动画
 
-<div class="project-poster">
+<div class="content-poster">
 <img src="http://7xlykq.com1.z0.glb.clouddn.com/image/2016-07-05_QQ20160705-0.png-mark" />
 <img src="http://7xlykq.com1.z0.glb.clouddn.com/image/2016-07-05_QQ20160705-1.png-mark" />
 <img src="http://7xlykq.com1.z0.glb.clouddn.com/image/2016-07-05_QQ20160705-2.png-mark" />
 </div>
-
-服务器是学校内网搭的，现在已经访问不到了。。

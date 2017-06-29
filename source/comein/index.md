@@ -1,11 +1,5 @@
 ---
 title: Comein
-tags:
-  - iOS
-  - 项目
-permalink: comein
-id: 22
-updated: '2016-07-07 15:09:47'
 date: 2016-07-05 01:15:24
 ---
 
@@ -28,7 +22,7 @@ date: 2016-07-05 01:15:24
 - 后台消息接受和通知、后台语音、视频通话
 
 
-<div class="project-poster">
+<div class="content-poster">
 <img src="http://7xlykq.com1.z0.glb.clouddn.com/image/2016-07-05_IMG_0227.jpg-mark" />
 <img src="http://7xlykq.com1.z0.glb.clouddn.com/image/2016-07-05_IMG_0203.jpg-mark" />
 <img src="http://7xlykq.com1.z0.glb.clouddn.com/image/2016-07-05_IMG_0216.jpg-mark" />

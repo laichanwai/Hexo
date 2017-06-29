@@ -1,11 +1,5 @@
 ---
 title: CCUT-WIFI
-tags:
-  - iOS
-  - 项目
-permalink: ccut-wifi
-id: 18
-updated: '2016-07-07 15:10:46'
 date: 2016-07-05 00:24:18
 ---
 
@@ -21,7 +15,7 @@ date: 2016-07-05 00:24:18
 - 破译并计算出使用流量、余额和使用时间
 - 使用 NSUserDefaults 储存用户设置
 
-<div class="project-poster">
+<div class="content-poster">
 <img src="http://7xlykq.com1.z0.glb.clouddn.com/image%2F2016-07-05_11BCCB1516C7A2E62DEFD2710895E632.png-mark" width="30%"/>
 <img src="http://7xlykq.com1.z0.glb.clouddn.com/image/2016-07-05_11BCCB1516C7A2E62DEFD2710895E632.png-mark" width="30%"/>
 </div>

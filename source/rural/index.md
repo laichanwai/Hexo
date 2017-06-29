@@ -1,11 +1,5 @@
 ---
 title: 农村移动学习平台
-tags:
-  - iOS
-  - 项目
-permalink: rural
-id: 19
-updated: '2016-07-07 15:10:31'
 date: 2016-07-05 00:33:15
 ---
 
@@ -22,7 +16,7 @@ date: 2016-07-05 00:33:15
 - 使用 CollectionView 进行16宫格布局
 - 使用 MobileVLC 播放视频和音频
 
-<div class="project-poster">
+<div class="content-poster">
 <img src="http://7xlykq.com1.z0.glb.clouddn.com/image/2016-07-05_zhuye.png-mark.black">
 <img src="http://7xlykq.com1.z0.glb.clouddn.com/image/2016-07-05_%E5%9B%AD%E8%89%BA%E7%89%B9%E8%89%B2%E4%BA%8C%E7%BA%A7%E9%A1%B5%E9%9D%A21-4.png-mark.black">
 <img src="http://7xlykq.com1.z0.glb.clouddn.com/image/2016-07-05_%E5%9B%AD%E8%89%BA%E7%89%B9%E8%89%B2%E4%B8%89%E7%BA%A7%E9%A1%B5%E9%9D%A21-1-1.png-mark.black">
