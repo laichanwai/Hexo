@@ -1,5 +1,16 @@
 <div class="footer <%= className %>">
 	<ul class="text-center">
-		<li class="footer-text">Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></span>
+		 <% if (theme.busuanzi){ %>
+			<li class="footer-text">    
+				<i class="fa fa-eye"></i> 
+				<span id="busuanzi_container_site_pv">
+					&nbsp热度 <span id="busuanzi_value_site_pv">
+					<i class="fa fa-spinner fa-spin"></i></span>℃ |
+				</span>
+			</li>
+		<% } %> 
+		<li class="footer-text">
+			Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></span>
+		</li>
 	</ul>
 </div>
