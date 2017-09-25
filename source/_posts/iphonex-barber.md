@@ -38,9 +38,15 @@ permalink: iphonex-barber
     HairTypeFlatTop,    // 平头
     HairTypeRoundFace,  // 圆脸
     ```
+
+    - 平头
     
-    ![平头](http://upload-images.jianshu.io/upload_images/1271031-dd4ee5256d79d0f2.png-500x500?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-    ![圆脸](http://upload-images.jianshu.io/upload_images/1271031-46846ca5bee186b6.png-500x500?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+        ![20170925150630900976032.png](http://storage.laizw.cn/images/upi/20170925150630900976032.png-500x500)
+
+    - 圆脸
+    
+        ![20170925150630905072718.png](http://storage.laizw.cn/images/upi/20170925150630905072718.png-500x500)
+
 
 如果各位有兴趣，可以加盟我的理发店：[Barber](https://github.com/laichanwai/Barber)
 
