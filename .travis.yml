@@ -20,6 +20,7 @@ before_install:
   - chmod 600 ~/.ssh/config
   - git config --global user.name "laizw"
   - git config --global user.email i@laizw.cn
+  - npm install
 deploy:
   provider: script
   script: hexo generate && hexo deploy
