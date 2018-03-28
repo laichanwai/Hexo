@@ -6,7 +6,7 @@ date: 2018-03-28 16:13:34
 permalink: bug_record_local_notification
 ---
 
-### 问题描述
+## 问题描述
 
 在 ios 11 之后，在 `applicationDidEnterBackground` 加入这段代码，会导致 app 的生命周期异常。
 
@@ -22,7 +22,7 @@ permalink: bug_record_local_notification
 }
 ```
 
-##### *补充说明一下这段代码的作用：*
+### *补充说明一下这段代码的作用：*
 
 `UIApplication` 中有一个属性 `applicationIconBadgeNumber`，它是用来设置 app 角标的。
 
@@ -37,13 +37,13 @@ permalink: bug_record_local_notification
 
 ---
 
-### 2018年03月28日18:36 补充:
+## 2018年03月28日18:36 补充:
 
 > 逐渐接近真相了。。。
 
 基于之前出现的问题，我这次补充出现 bug 具体的原因。
 
-#### 执行的时机问题:
+### 1. 执行的时机问题:
 
 - 将这段代码放到 `didFinishLaunching`: 
 
@@ -73,19 +73,19 @@ permalink: bug_record_local_notification
 
     ❌ 进程不退出，app 运行状态异常
 
-#### notification 设置问题:
+### 2. notification 设置问题:
 
 先将这段代码放到 `DidEnterBackground` 中，然后修改 `applicationIconBadgeNumber` 的值
 
-- `applicationIconBadgeNumber` = -1:
+- `applicationIconBadgeNumber = -1`:
     
     ❌ 进程不退出，app 运行状态异常
     
-- `applicationIconBadgeNumber` = 0:
+- `applicationIconBadgeNumber = 0`:
 
     ✅ 进程退出，app 运行状态正常
     
-- `applicationIconBadgeNumber` = 1:
+- `applicationIconBadgeNumber = 1`:
     
     ❌ 进程不退出，app 运行状态异常
     
@@ -95,11 +95,11 @@ permalink: bug_record_local_notification
     
 
 
-### 2018年03月28日17:36 补充:
+## 2018年03月28日17:36 补充:
 
 经过一番测试，目前已经确定这个 bug 具体表现：
     
-#### 1. app 不退出
+### 1. app 不退出
     
 我写了个空白项目，然后发现，就算已经杀死了 app（双击 home 然后上滑退出）
 
@@ -111,7 +111,7 @@ permalink: bug_record_local_notification
     
 真是十分诡异。。。
     
-#### 2. app 的运行状态异常
+### 2. app 的运行状态异常
     
 这里主要影响的方法是 `- (void)applicationWillEnterForeground:(UIApplication *)application`
     
