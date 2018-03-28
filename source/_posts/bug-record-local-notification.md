@@ -22,11 +22,82 @@ permalink: bug_record_local_notification
 }
 ```
 
+##### *补充说明一下这段代码的作用：*
+
+`UIApplication` 中有一个属性 `applicationIconBadgeNumber`，它是用来设置 app 角标的。
+
+`UILocalNotification` 也有一个相同的属性 `applicationIconBadgeNumber`，但是它的作用不一样，它是用来修改 app 角标的，为 0 代表不改变。
+
+一旦通过 `UIApplication` 将程序的角标从非零置为零，就会清空通知栏的所有通知。如果想清除角标但不清空通知栏，有如下方法。
+
+
+1. 发送一条远程推送，推送内容只有badge，并将badge的值设为负数。此时程序角标会消失但是通知栏的推送消息不清除。
+
+2. 同样的方法，发送一条本地推送。
+
 ---
 
-### 2018年03月28日17:36 补充：
+### 2018年03月28日18:36 补充:
 
-经过一番测试，目前已经确定这个 bug 会导致的问题：
+> 逐渐接近真相了。。。
+
+基于之前出现的问题，我这次补充出现 bug 具体的原因。
+
+#### 执行的时机问题:
+
+- 将这段代码放到 `didFinishLaunching`: 
+
+    ✅ 进程退出，app 运行状态正常
+
+- 将这段代码放到 `WillEnterForeground`: 
+
+    ✅ 进程退出，app 运行状态正常
+    
+- 将这段代码放到 `DidBecomeActive`: 
+
+    ✅ 进程退出，app 运行状态正常
+    
+- 将这段代码放到 `WillResignActive`: 
+
+    ✅ 进程退出，app 运行状态正常
+    
+- 将这段代码放到 `WillTerminate`: 
+
+    ✅ 进程退出，app 运行状态正常
+    
+- 将这段代码放到 `rootViewController` 的 `viewDidLoad`: 
+
+    ✅ 进程退出，app 运行状态正常
+
+- 将这段代码放到 `DidEnterBackground`: 
+
+    ❌ 进程不退出，app 运行状态异常
+
+#### notification 设置问题:
+
+先将这段代码放到 `DidEnterBackground` 中，然后修改 `applicationIconBadgeNumber` 的值
+
+- `applicationIconBadgeNumber` = -1:
+    
+    ❌ 进程不退出，app 运行状态异常
+    
+- `applicationIconBadgeNumber` = 0:
+
+    ✅ 进程退出，app 运行状态正常
+    
+- `applicationIconBadgeNumber` = 1:
+    
+    ❌ 进程不退出，app 运行状态异常
+    
+- 删掉代码，`applicationIconBadgeNumber` 不赋值
+
+    ✅ 进程退出，app 运行状态正常
+    
+
+
+### 2018年03月28日17:36 补充:
+
+经过一番测试，目前已经确定这个 bug 具体表现：
     
 #### 1. app 不退出
     
@@ -34,7 +105,7 @@ permalink: bug_record_local_notification
 
 ![2018032843529IMG_0752C6E81934-1.jpg](http://storage.laizw.cn/image/upi/2018032843529IMG_0752C6E81934-1.jpg-watermark)
     
-但是仍然能够查看到这个 app 的进程，这说明，它仍在后台。
+所有后台已经退出，剩下设置 app，但是通过 Xcode -> Debug -> Attach to Process 仍然能够查看到这个 app 的进程，这说明，它仍在后台。
     
 ![20180328152223141358041.png](http://storage.laizw.cn/image/upi/20180328152223141358041.png-watermark)
     
